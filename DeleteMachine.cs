@@ -10,7 +10,7 @@ namespace Sample.Functions
     public static class DeleteMachine
     {
         [FunctionName("DeleteMachine")]
-        public static async Task Run([TimerTrigger("0 0 19 * * 5-0")]TimerInfo myTimer, ILogger log)
+        public static async Task Run([TimerTrigger("0 0 17 * * 5-0")]TimerInfo myTimer, ILogger log)
         {
             log.LogInformation($"C# Timer trigger function executed at: {DateTime.Now}");
 
@@ -33,7 +33,7 @@ namespace Sample.Functions
             var rgExists = await azure.ResourceGroups.ContainAsync(resourceGroupName);
             if(rgExists) 
             {
-                await azure.ResourceGroups.DeleteByNameAsync(resourceGroupName);
+                azure.ResourceGroups.DeleteByNameAsync(resourceGroupName);
             }
         }
     }

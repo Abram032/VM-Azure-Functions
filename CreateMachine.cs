@@ -13,7 +13,7 @@ namespace Sample.Functions
     public static class CreateMachine
     {
         [FunctionName("CreateMachine")]
-        public static async Task Run([TimerTrigger("0 0 18 * * 5-0")]TimerInfo myTimer, ILogger log)
+        public static async Task Run([TimerTrigger("0 0 16 * * 5-0")]TimerInfo myTimer, ILogger log)
         {
             log.LogInformation($"C# Timer trigger function executed at: {DateTime.Now}");
             
@@ -60,7 +60,7 @@ namespace Sample.Functions
             var templateContent = await templateReader.ReadToEndAsync();
             var parametersContent = await parametersReader.ReadToEndAsync();
             
-            var deployment = await azure.Deployments
+            azure.Deployments
                 .Define(deploymentName)
                 .WithExistingResourceGroup(resourceGroupName)
                 .WithTemplate(templateContent)
