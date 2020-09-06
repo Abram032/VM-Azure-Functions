@@ -13,13 +13,13 @@ Simple Virtual Machine management with Azure Functions
     "AZURE_SERVICE_PRINCIPAL_CLIENT_ID" : "{ClientId}",
     "AZURE_SERVICE_PRINCIPAL_SECRET": "{Secret}",
     "AZURE_SERVICE_PRINCIPAL_TENANT_ID": "{TenantId}",
-    "AZURE_STORAGE_CONNECTION_STRING": "AccountName=devstoreaccount1;AccountKey=Eby8vdM02xNOcqFlqUwJPLlmEtlCDXJ1OUzFT50uSRZ6IFsuFq2UVErCz4I6tq/K1SZFPTOtr/KBHBeksoGMGw==;DefaultEndpointsProtocol=http;BlobEndpoint=http://127.0.0.1:10000/devstoreaccount1;QueueEndpoint=http://127.0.0.1:10001/devstoreaccount1;TableEndpoint=http://127.0.0.1:10002/devstoreaccount1;",
-    "AZURE_RESOURCE_GROUP_NAME": "vm-test-rg",
-    "AZURE_REGION": "westeurope",
-    "AZURE_STORAGE_CONTAINER_NAME": "templates",
-    "ARM_TEMPLATE_NAME": "template.json",
-    "ARM_PARAMETERS_NAME": "parameters.json",
-    "AZURE_DEPLOYMENT_NAME": "VMTestDeployment"
+    "AZURE_STORAGE_CONNECTION_STRING": "{ConnectionString}",
+    "AZURE_RESOURCE_GROUP_NAME": "{RGName}",
+    "AZURE_REGION": "{Region}",
+    "AZURE_STORAGE_CONTAINER_NAME": "{ContainerName}",
+    "ARM_TEMPLATE_NAME": "{TemplateName}",
+    "ARM_PARAMETERS_NAME": "{ParametersName}",
+    "AZURE_DEPLOYMENT_NAME": "{DeploymentName}"
   }
 }
 ```
