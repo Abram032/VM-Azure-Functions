@@ -10,7 +10,7 @@ namespace Sample.Functions
     public static class DeleteMachine
     {
         [FunctionName("DeleteMachine")]
-        public static async Task Run([TimerTrigger("0 */1 * * * *")]TimerInfo myTimer, ILogger log)
+        public static async Task Run([TimerTrigger("0 0 19 * * 5-0")]TimerInfo myTimer, ILogger log)
         {
             log.LogInformation($"C# Timer trigger function executed at: {DateTime.Now}");
 
